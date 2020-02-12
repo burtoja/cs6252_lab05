@@ -44,6 +44,10 @@ h2 {
     font-size: 120%;
     margin: .25em 0 .5em;
 }
+h3 {
+    font-size: 100%;
+    margin: .25em 0 .5em;
+}
 h1, h2 {
     color: rgb(208, 133, 4);
 }
