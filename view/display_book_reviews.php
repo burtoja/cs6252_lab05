@@ -7,16 +7,22 @@
  			$reviews = get_reviews_by_book($book_id);
  			?>
 			<li>
-				TITLE: 
-				<?php echo $book['bookTitle']; ?>
+				<h2>TITLE:  <?php echo $book['bookTitle']; ?></h2>
 			</li>
 			<ul>
-				<?php foreach ($reviews as $review) :?>
-				<li>
-					REVIEW: 
-					<?php echo $review['review']; ?>
-				</li>
-				<?php endforeach; ?>
+				<?php if(count($reviews) == 0) : ?>
+					<li>
+						There are no reviews for this title.
+					</li>
+				<?php else: ?>
+				
+					<?php foreach ($reviews as $review) :?>
+					<li>
+						<h3>REVIEW:</h3> 
+						<?php echo $review['review']; ?>
+					</li>
+					<?php endforeach; ?>
+				<?php endif;?>
 			</ul>
 		<?php endforeach; ?>
 	</ul>
